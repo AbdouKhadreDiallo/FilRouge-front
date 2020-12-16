@@ -1,0 +1,33 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 5px 5px 5px rgb(199, 196, 196);
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  
+  td {
+    padding-right: 8px;
+  }
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    
+  }
+
+  .submit, .reset{
+    float: right;
+    width: 30%;
+  }
+  .reset{
+    float: left;
+  }
+  .espace-ajout{
+    background-color: rgb(223, 221, 221);
+    height: 50px;
+}

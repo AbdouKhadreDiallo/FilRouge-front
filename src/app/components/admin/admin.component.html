@@ -1,1 +1,95 @@
-<p>admin works!</p>
+
+<div class="wrapper">
+
+	<div class="top_navbar">
+		<div class="logo">
+			<a href="#">Coding Market</a>
+		</div>
+		<div class="top_menu" style="background-color:  #614ef5;;">
+			<div class="home_link">
+				<a [routerLink]="['admin']">
+					<span class="icon"><i class="fas fa-home"></i></span>
+					<span>Home</span>
+				</a>
+			</div>
+			<div class="right_info">
+				<div class="icon_wrap">
+					<div class="icon">
+						<i class="far fa-columns"></i>
+					</div>
+				</div>
+				<div class="icon_wrap">
+					<div class="icon">
+						<button (click)="logout()" class="btn btn-danger">DECONNEXION</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="main_body">
+		
+		<div class="sidebar_menu col-md-5">
+	        <div class="inner__sidebar_menu">
+	        	
+	        	<ul>
+		          <li>
+		            <a [routerLink]="['users']">
+		              <span class="icon">
+                        <i class="fas fa-columns"></i></span>
+                          
+		              <span class="list">Utilisateurs</span>
+		            </a>
+		          </li>
+		          <li>
+		            <a [routerLink]="['profils']" class="active">
+		              <span class="icon"><i class="fas fa-chart-pie"></i></span>
+		              <span class="list">Profils</span>
+		            </a>
+		          </li>
+		          <li>
+		            <a href="#">
+		              <span class="icon"><i class="fas fa-address-book"></i></span>
+		              <span class="list">Contact</span>
+		            </a>
+		          </li>
+		          <li>
+		            <a href="#">
+		              <span class="icon"><i class="fas fa-address-card"></i></span>
+		              <span class="list">About</span>
+		            </a>
+		          </li>
+		          <li>
+		            <a href="#">
+		              <span class="icon"><i class="fab fa-blogger"></i></span>
+		              <span class="list">Blogs</span>
+		            </a>
+		          </li>
+		          <li>
+		            <a href="#">
+		              <span class="icon"><i class="fas fa-map-marked-alt"></i></span>
+		              <span class="list">Maps</span>
+		            </a>
+		          </li>
+		        </ul>
+
+		        <div class="hamburger">
+			        <div class="inner_hamburger">
+			            <span class="arrow">
+			                <i class="fas fa-long-arrow-alt-left"></i>
+			                <i class="fas fa-long-arrow-alt-right"></i>
+			            </span>
+			        </div>
+			    </div>
+
+	        </div>
+	    </div>
+
+	    <div class="container display-pages col-md-7 center">
+            <router-outlet></router-outlet>
+	    </div>
+	</div>
+</div>
+
+
+<!-- <button (click)="logout()" class="btn btn-danger">DECONNEXION</button> -->

@@ -1,0 +1,23 @@
+
+.espace-ajout{
+    background-color: rgb(223, 221, 221);
+    height: 50px;
+}
+.example-button-row button,
+.example-button-row a {
+  margin-left: 8px;
+  height: 100%;
+}
+.mat-button-base {
+    height: 100%;
+}
+table {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    min-width: 500px;
+}
+th.mat-header-cell {
+    text-align: left;
+    max-width: 300px;
+}

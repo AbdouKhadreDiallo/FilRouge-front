@@ -1,0 +1,45 @@
+ <div class="center">
+		<button mat-raised-button color="primary" [routerLink]="['/admin/users']">Liste Utilisateurs</button>
+	</div>
+<div class="center">
+   
+    <form class="example-form" [formGroup] = "registerForm" (ngSubmit) = "addUser()">
+        <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label>Type d'utilisateur</mat-label>
+            <mat-select [formControl]="registerForm.controls['profil']" required>
+                <mat-option>--</mat-option>
+                <mat-option *ngFor="let profil of profils" [value]="profil">
+                {{profil.libelle}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label>Firstname</mat-label>
+            <input type="text" [formControl]="registerForm.controls['firstname']" matInput placeholder="Firstname">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label>Lastname</mat-label>
+            <input type="text" [formControl]="registerForm.controls['lastname']" matInput placeholder="lastname">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input type="email" matInput [formControl]="registerForm.controls['email']" placeholder="Ex. pat@example.com">
+            <mat-error *ngIf="registerForm.controls.email.touched && registerForm.controls.email.invalid" >
+                <span *ngIf="registerForm.controls.email.errors.required" > l'email est obligatoire </span>
+            </mat-error>
+        </mat-form-field>
+        <br>
+
+        <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label>avatar</mat-label>
+            <ngx-mat-file-input [formControl]="registerForm.controls['avatar']" name="avatar" (change)="onFileSelect($event)" placeholder="Basic outline placeholder" ></ngx-mat-file-input>
+            <mat-icon matSuffix>folder</mat-icon>
+          </mat-form-field>
+          <br>
+          <button mat-raised-button color="warn" class="reset" type="reset">Reset</button>
+        <button mat-raised-button color="primary" class="submit" type="submit">Ajouter</button>
+    </form>
+</div>
